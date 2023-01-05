@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+        integrity="sha384-xeJqLiuOvjUBq3iGOjvSQSIlwrpqjSHXpduPd6rQpuiM3f5/ijby8pCsnbu5S81n" crossorigin="anonymous"> -->
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: questrial;
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .hamburger-container {
+        background: red;
+        height: 10vh;
+        display: none;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .hamburger-main {
+        margin-left: 20px;
+        cursor: pointer;
+    }
+
+    .bar {
+        width: 30px;
+        height: 3px;
+        background: #fff;
+        margin: 5px 0 5px 0;
+    }
+
+    ul {
+        background-color: red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    ul li {
+        list-style: none;
+        padding: 20px 0px;
+    }
+
+    a {
+        border: 1ox solid green;
+        text-decoration: none;
+        padding: 20px 30px;
+        transition: 0.2s;
+    }
+
+    a:hover {
+        background-color: rgb(230, 3, 3);
+    }
+
+    @media screen and (max-width: 681px) {
+        .hamburger-container {
+            display: flex
+        }
+
+        ul {
+            display: block;
+            position: absolute;
+            transition: 0.2s;
+            width: 0;
+        }
+
+        ul li {
+            padding: 0;
+        }
+
+        a {
+            opacity: 0;
+            width: 100%;
+            display: inline-block;
+            pointer-events: none;
+        }
+    }
+</style>
+
+<body>
+    <div class="hamburger-container">
+        <div class="hamburger-main" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+    <ul id="navbar">
+        <li><a href="#" class="nav-link">Home</a></li>
+        <li><a href="#" class="nav-link">About</a></li>
+        <li><a href="#" class="nav-link">Products</a></li>
+        <li><a href="#" class="nav-link">Contact</a></li>
+    </ul>
+    <div style="width: 80%; margin: 50px auto; line-height: 1.5rem;">
+        <p style="color: #000;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem nobis vel quia aliquam
+            mollitia aspernatur
+            velit excepturi consequatur doloribus, eius sequi debitis saepe quisquam ad officiis. Quibusdam numquam
+            dolor earum.</p>
+        <p style="color: #000;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ratione beatae magni
+            voluptatem esse, autem possimus sint eaque consequatur, a commodi! Vitae facere officia deserunt minus quo
+            nisi autem dolor.</p>
+        <p style="color: #000;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore deleniti facere ipsum
+            nam voluptates enim quae vel. Ab, impedit aut? Fugit magni eos reiciendis officia hic laboriosam vero cumque
+            magnam.</p>
+        <p style="color: #000;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus sequi nihil natus,
+            laborum officia possimus, quis consequatur facilis eaque commodi ea maiores suscipit nulla amet, quisquam
+            esse mollitia culpa reiciendis.</p>
+        <p style="color: #000;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ratione exercitationem
+            soluta repellat in assumenda? Magnam repudiandae odio porro eum quisquam optio quod autem. Fuga dolorem
+            dolor tempora officia animi.</p>
+        <p style="color: #000;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis culpa minima deleniti
+            quam inventore cum eos molestias laudantium, quia debitis nam, id dolore doloribus iusto dolor nihil
+            cupiditate rem earum!
+            Saepe, quas? Ut magni ratione nesciunt laudantium adipisci quos ex consectetur dolorem rerum maiores sint,
+            quaerat expedita perferendis voluptas sed eaque labore atque nulla, ipsa minima dolorum beatae ullam!
+            Pariatur.</p>
+        <p style="color: #000;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quia recusandae dolore
+            minus dolor magni tempore quas autem ipsum similique? Architecto sit fugit natus ut, excepturi rem?
+            Repellendus, sed architecto!
+            A ad voluptatibus sequi debitis cupiditate! Debitis, provident ut natus dicta dolorum architecto dignissimos
+            ratione quisquam in? Repellat, obcaecati esse veniam facilis minima asperiores! Tempore, veniam. Obcaecati
+            ut quos cumque!
+            Qui cum voluptas, maxime laudantium nemo id laboriosam maiores suscipit minus inventore molestias porro
+            architecto. Iusto, possimus necessitatibus quibusdam dolores error nemo recusandae asperiores officiis
+            tempore iure doloremque exercitationem repudiandae.
+            Culpa inventore aperiam numquam labore aut ipsum nulla, quam dicta saepe soluta quas quis dolorum,
+            distinctio ipsam, maxime qui itaque nihil rerum eius! Adipisci atque ut, facere autem ab neque.
+            Architecto repellat ipsa esse distinctio animi non pariatur! Sed dolore cum, pariatur adipisci ut suscipit,
+            quidem minima eligendi illo animi, natus accusantium perspiciatis eveniet error similique? Consequatur, qui
+            quidem. Nostrum.</p>
+    </div>
+</body>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navbar = document.getElementById('navbar');
+    const navLink = document.querySelectorAll('.nav-link');
+
+    const showNavbar = () => {
+        if (navbar.style.width === "100%") {
+            navbar.style.width = "0%";
+
+            const navLink = document.querySelectorAll('.nav-link');
+            let index = 0, length = navLink.length;
+            for (index; index < length; index++) {
+                navLink[index].style.pointerEvents = "none";
+                navLink[index].style.opacity = "0";
+            }
+        }
+        else {
+            navbar.style.width = "100%";
+
+            const navLink = document.querySelectorAll('.nav-link');
+            let index = 0, length = navLink.length;
+            for (index; index < length; index++) {
+                navLink[index].style.pointerEvents = "all";
+                navLink[index].style.opacity = "1";
+            }
+        }
+    }
+
+    hamburger.addEventListener("click", showNavbar);
+</script>
+
+</html>
